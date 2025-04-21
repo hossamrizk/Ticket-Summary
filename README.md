@@ -83,6 +83,9 @@ ticket-data-analyzer/
 │   │   ├── data_processor.py    
 │   │   ├── category_mapper.py  
 │   │   └── timeline_analyzer.py 
+│   ├── documentation/                 
+│   │   ├── Code.md       
+│   │   ├── Implementation.md
 │   ├── helpers/                 
 │   │   ├── initialize_components.py       
 │   │   ├── process_uploaded_file.py    
