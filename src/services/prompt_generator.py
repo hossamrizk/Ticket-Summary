@@ -5,6 +5,7 @@ class PromptGenerator:
     
     def create_section_prompt(self, section_name: str, category: str, section_data: pd.DataFrame) -> str:
         """Create a prompt for summarizing a section of tickets"""
+       
         # Generate ticket details string
         ticket_details = "\n".join(
             f"- Ticket {row.get('ORDER_NUMBER', 'Unknown')} ({row.get('ACCEPTANCE_TIME', 'Unknown date').date() if hasattr(row.get('ACCEPTANCE_TIME', pd.NaT), 'date') else 'Unknown date'}): "
