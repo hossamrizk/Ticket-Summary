@@ -7,6 +7,7 @@ class TimeSeriesView:
     
     def render(self, df: pd.DataFrame):
         """Render time series visualization"""
+        
         # Only create date-based visualization if the column exists and has valid dates
         if 'ACCEPTANCE_TIME' in df.columns and not df['ACCEPTANCE_TIME'].isna().all():
             # Ensure we have a date column

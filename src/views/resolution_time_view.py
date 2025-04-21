@@ -7,6 +7,7 @@ class ResolutionTimeView:
     
     def render(self, df: pd.DataFrame):
         """Render resolution time visualization"""
+        
         # Resolution time analysis
         if all(col in df.columns for col in ['COMPLETION_TIME', 'ACCEPTANCE_TIME']) and \
            not df['COMPLETION_TIME'].isna().all() and not df['ACCEPTANCE_TIME'].isna().all():

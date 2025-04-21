@@ -16,20 +16,17 @@ class AIService:
     def set_model(self, model_name: str):
         """Change the model"""
         self.model_name = model_name
-        self._llm = None  # Reset so it will be reinitialized with new model
+        self._llm = None  
     
     def generate_summary(self, prompt: str) -> str:
         """Generate summary using local Ollama LLM via LangChain"""
         try:
             self._initialize_llm()
             
-            # Create a human message
             message = HumanMessage(content=prompt)
             
-            # Get response from LLM
             response = self._llm.invoke([message])
             
-            # Return the content of the response
             return response.content
         except Exception as e:
             raise RuntimeError(f"Error generating AI summary: {str(e)}")
