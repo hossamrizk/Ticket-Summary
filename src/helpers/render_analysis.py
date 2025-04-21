@@ -7,6 +7,7 @@ from views.summary_view import SummaryView
 def render_analysis(data_controller: DataController, summary_controller: SummaryController, 
                     data_overview_view: DataOverviewView, summary_view: SummaryView, visualization_controller: VisualizationController):
     """Render all analysis components"""
+    
     # Get statistics
     stats = data_controller.get_stats()
     
